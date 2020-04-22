@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Collections.ObjectModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +26,18 @@ namespace StudentUWPApp
         public MainPage()
         {
             this.InitializeComponent();
+            Student simon = new Student("simon");
+            Student bob = new Student("bob");
+            Student per = new Student("per");
+            Student søren = new Student("søren");
+            Student torben = new Student("torben");
+
+            OC_list_Students.Add(simon);
+            OC_list_Students.Add(bob);
+            OC_list_Students.Add(per);
+            OC_list_Students.Add(søren);
+            OC_list_Students.Add(torben);
         }
+        ObservableCollection<Student> OC_list_Students = new ObservableCollection<Student>();
     }
 }

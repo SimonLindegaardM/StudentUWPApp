@@ -26,11 +26,11 @@ namespace StudentUWPApp
         public MainPage()
         {
             this.InitializeComponent();
-            Student simon = new Student("simon",13);
-            Student bob = new Student("bob",34);
-            Student per = new Student("per",302);
-            Student søren = new Student("søren",420);
-            Student torben = new Student("torben",666);
+            Student simon = new Student("Simon",13, 30205948);
+            Student bob = new Student("Bob",34, 55844930);
+            Student per = new Student("Per",302, 49602949);
+            Student søren = new Student("Søren",420, 69583394);
+            Student torben = new Student("Torben",666, 78573484);
 
             OC_list_Students.Add(simon);
             OC_list_Students.Add(bob);

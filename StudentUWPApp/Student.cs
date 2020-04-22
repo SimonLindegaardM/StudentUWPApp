@@ -12,10 +12,12 @@ namespace StudentUWPApp
     {
         private string _navn;
         private int _studentid;
-        public Student(string Navn, int StudentID )
+        private int _mobilnr;
+        public Student(string Navn, int StudentID, int MobilNr )
         {
             _navn = Navn;
             _studentid = StudentID;
+            _mobilnr = MobilNr;
         }
         public string Navn
         {
@@ -32,6 +34,15 @@ namespace StudentUWPApp
             set
             {
                 _studentid = value;
+                this.OnPropertyChanged();
+            }
+        }
+        public int MobilNr
+        {
+            get { return _mobilnr; }
+            set
+            {
+                _mobilnr = value;
                 this.OnPropertyChanged();
             }
         }

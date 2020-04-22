@@ -15,7 +15,10 @@
                   VerticalAlignment="Top" Width="174">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:Student">
-                    <TextBox Text="{x:Bind Navn, Mode=TwoWay}"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Text="{x:Bind Navn, Mode=TwoWay}"/>
+                        <TextBlock Text="{x:Bind StudentID, Mode=TwoWay}"/>
+                    </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

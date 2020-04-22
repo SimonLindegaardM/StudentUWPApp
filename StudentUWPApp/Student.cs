@@ -11,9 +11,11 @@ namespace StudentUWPApp
     public class Student : INotifyPropertyChanged
     {
         private string _navn;
-        public Student(string Navn)
+        private int _studentid;
+        public Student(string Navn, int StudentID )
         {
             _navn = Navn;
+            _studentid = StudentID;
         }
         public string Navn
         {
@@ -21,6 +23,15 @@ namespace StudentUWPApp
             set
             {
                 _navn = value;
+                this.OnPropertyChanged();
+            }
+        }
+        public int StudentID
+        {
+            get { return _studentid; }
+            set
+            {
+                _studentid = value;
                 this.OnPropertyChanged();
             }
         }

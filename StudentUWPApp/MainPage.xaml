@@ -8,7 +8,19 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid RenderTransformOrigin="0.306,0.613">
+        <ListView RenderTransformOrigin="0.244,0.277"/>
+        <ListView ItemsSource="{x:Bind OC_list_Students}" 
+                  HorizontalAlignment="Left" Height="260" Margin="178,240,0,0" 
+                  VerticalAlignment="Top" Width="174">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Student">
+                    <TextBox Text="{x:Bind Navn, Mode=TwoWay}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
 
     </Grid>
 </Page>
